@@ -139,12 +139,57 @@ $(document).ready(function(){
 	}
 	HeaderScroll();
 
+	function showElement(){
+		let st = $(window).scrollTop();
+		let windowHeight = $(window).outerHeight();
+		$('.anim-el').each(function(){
+			let $element = $(this);
+			let elementParent = $element.attr('data-parent');
+			let elementOffset = $element.attr('data-offset');
+			let elementDelay = +$element.attr('data-delay');
+			let startPoint;
+			if (elementParent){
+				startPoint = $(elementParent).offset().top - windowHeight + 50;
+			} else {
+				startPoint = $element.offset().top - windowHeight + 50;
+			}
+			if ($element.hasClass('fadeUp')){
+				startPoint += 50;
+			}
+			if (elementOffset){
+				if (elementOffset.includes('%')){
+					elementOffset = elementOffset.slice(0,elementOffset.length-1);
+					startPoint -= windowHeight*(+elementOffset)/100;
+				} else {
+					startPoint -= +elementOffset;
+				}
+			}
+			if (st > startPoint){
+				if (elementDelay){
+					setTimeout(function(){
+						$element.addClass('show');
+					},elementDelay);
+				} else {
+					$element.addClass('show');
+				}
+			} else {
+				$element.removeClass('show');
+			}
+		});
+	}
+
+	$(window).on('load',function(){
+		showElement();
+	});
+
 	$(window).on('scroll',function(){
 		HeaderScroll();
+		showElement();
 	});
 
 	$(window).resize(function(){
 		HeaderScroll();
+		showElement();
 	});
 
 });
