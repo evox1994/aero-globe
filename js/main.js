@@ -115,13 +115,21 @@ $(document).ready(function(){
 	footerYear();
 
 	$(document).on('click','.header-burger',function(){
-		$('.header-menu').addClass('active');
-		$('body').addClass('no-scroll');
+		if ( $(this).hasClass('active') ){
+			$(this).removeClass('active');
+			$('.header-menu').removeClass('active');
+			$('body').removeClass('no-scroll');
+		} else {
+			$(this).addClass('active');
+			$('.header-menu').addClass('active');
+			$('body').addClass('no-scroll');
+		}
 	});
 
-	$(document).on('click','.header-menu .menu .close, .header-menu .overlay',function(){
+	$(document).on('click','.header-menu .overlay',function(){
 		$('.header-menu').removeClass('active');
 		$('body').removeClass('no-scroll');
+		$('.header-burger').removeClass('active');
 	});
 
 	$(document).on('click','.face-arr',function(){
@@ -149,12 +157,12 @@ $(document).ready(function(){
 			let elementDelay = +$element.attr('data-delay');
 			let startPoint;
 			if (elementParent){
-				startPoint = $(elementParent).offset().top - windowHeight + 50;
+				startPoint = $(elementParent).offset().top - windowHeight;
 			} else {
-				startPoint = $element.offset().top - windowHeight + 50;
+				startPoint = $element.offset().top - windowHeight;
 			}
 			if ($element.hasClass('fadeUp')){
-				startPoint += 50;
+				startPoint -= 50;
 			}
 			if (elementOffset){
 				if (elementOffset.includes('%')){
