@@ -1041,10 +1041,10 @@
 		font-size: 14px;
 		margin-top: 15px;
 	}
-	.b-title br,
+	/*.b-title br,
 	.b-subtitle br {
 		display: none;
-	}
+	}*/
 	.b-text {
 		margin-top: 25px;
 		font-size: 12px;
@@ -1071,9 +1071,9 @@
 	.b-drone .image {
 		margin-top: 20px;
 	}
-	.b-drone .image img {
+	/*.b-drone .image img {
 		max-height: 235px;
-	}
+	}*/
 	.b-drone .b-btn {
 		margin: 20px auto 0;
 	}
