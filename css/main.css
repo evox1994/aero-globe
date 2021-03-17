@@ -573,8 +573,14 @@
 	max-width: 860px;
 	margin: 0 auto;
 }
+.b-drone > * {
+	position: relative;
+	z-index: 1;
+}
 .b-drone .image {
 	margin-top: 40px;
+	position: relative;
+	z-index: 0;
 }
 .b-drone .image img {
 	display: block;
