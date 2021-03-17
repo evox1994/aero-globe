@@ -186,9 +186,9 @@ $(document).ready(function(){
 		});
 	}
 
-	$(window).on('load',function(){
+	//$(window).on('load',function(){
 		showElement();
-	});
+	//});
 
 	$(window).on('scroll',function(){
 		HeaderScroll();
