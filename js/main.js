@@ -186,9 +186,16 @@ $(document).ready(function(){
 		});
 	}
 
-	$(window).on('load',function(){
-		showElement();
-	});
+	function FaceLoaded(){
+		let $element = $('.header').next();
+		let element_bg = $element.css('background-image').replace(/url\((?:\"|\')/,'').replace(/(?:\"|\')\)/,'');
+		let image = new Image();
+		image.src = element_bg;
+		image.onload = function(){
+			showElement();
+		};
+	}
+	FaceLoaded();
 
 	$(window).on('scroll',function(){
 		HeaderScroll();

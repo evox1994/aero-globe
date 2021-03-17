@@ -562,12 +562,12 @@
 	background-image: url('../i/face-arr.svg');
 	margin: 15px auto 0;
 }
-.b-face .face-arr.show {
+/*.b-face .face-arr.show {
 	-webkit-animation: UpDown 2s linear infinite;
 	-moz-animation: UpDown 2s linear infinite;
 	-ms-animation: UpDown 2s linear infinite;
 	animation: UpDown 2s linear infinite;
-}
+}*/
 
 .b-drone {
 	max-width: 860px;
