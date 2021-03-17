@@ -406,6 +406,7 @@
 	background-color: #303030;
 	position: absolute;
 	top: 0;
+	z-index: 1;
 }
 .b-section.left-line:before {
 	left: 7%;
