@@ -147,6 +147,12 @@ $(document).ready(function(){
 	}
 	HeaderScroll();
 
+	function setFaceHeight(){
+		let windowHeight = $(window).innerHeight();
+		alert(windowHeight);
+	}
+	setFaceHeight();
+
 	function showElement(){
 		let st = $(window).scrollTop();
 		let windowHeight = $(window).outerHeight();
@@ -200,11 +206,13 @@ $(document).ready(function(){
 	$(window).on('scroll',function(){
 		HeaderScroll();
 		showElement();
+		//setFaceHeight();
 	});
 
 	$(window).resize(function(){
 		HeaderScroll();
 		showElement();
+		setFaceHeight();
 	});
 
 });
