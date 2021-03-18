@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 	function setFaceHeight(){
 		let windowHeight = $(window).innerHeight();
-		alert(windowHeight);
+		$('.header').next().innerHeight(windowHeight);
 	}
 	setFaceHeight();
 
@@ -206,7 +206,6 @@ $(document).ready(function(){
 	$(window).on('scroll',function(){
 		HeaderScroll();
 		showElement();
-		//setFaceHeight();
 	});
 
 	$(window).resize(function(){
