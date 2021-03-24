@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 	function setFaceHeight(){
 		let windowHeight = $(window).innerHeight();
-		$('.header').next().innerHeight(windowHeight);
+		$('.b-face').innerHeight(windowHeight);
 	}
 	setFaceHeight();
 
@@ -163,7 +163,11 @@ $(document).ready(function(){
 			let elementDelay = +$element.attr('data-delay');
 			let startPoint;
 			if (elementParent){
-				startPoint = $(elementParent).offset().top - windowHeight;
+				if ($(window).outerWidth() > 768){
+					startPoint = $element.parent().offset().top - windowHeight;
+				} else {
+					startPoint = $element.offset().top - windowHeight;
+				}
 			} else {
 				startPoint = $element.offset().top - windowHeight;
 			}
@@ -193,15 +197,27 @@ $(document).ready(function(){
 	}
 
 	function FaceLoaded(){
-		let $element = $('.header').next();
-		let element_bg = $element.css('background-image').replace(/url\((?:\"|\')/,'').replace(/(?:\"|\')\)/,'');
-		let image = new Image();
-		image.src = element_bg;
-		image.onload = function(){
+		let $element = $('.b-face');
+		if ( $element.length ){
+			let element_bg = $element.css('background-image').replace(/url\((?:\"|\')/,'').replace(/(?:\"|\')\)/,'');
+			let image = new Image();
+			image.src = element_bg;
+			image.onload = function(){
+				showElement();
+			};
+		} else {
 			showElement();
-		};
+		}
 	}
 	FaceLoaded();
+
+	function setPadding(){
+		$('.header').next().removeAttr('style');
+		let padding = +$('.header').next().css('padding-top').replace(/[^+\d.]/g,'');
+		padding += $('.header').outerHeight();
+		$('.header').next().css('padding-top',padding);
+	}
+	setPadding();
 
 	$(window).on('scroll',function(){
 		HeaderScroll();
@@ -212,6 +228,7 @@ $(document).ready(function(){
 		HeaderScroll();
 		showElement();
 		setFaceHeight();
+		setPadding();
 	});
 
 });

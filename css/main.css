@@ -525,7 +525,6 @@
 .b-face {
 	position: relative;
 	height: 100vh;
-	padding: calc(70px + 3.8vh) 0 3.8vh;
 	background-color: #eeeeee;
 	overflow: hidden;
 	background-repeat: no-repeat;
@@ -545,6 +544,7 @@
 	align-content: space-between;
 	flex-wrap: wrap;
 	height: 100%;
+	padding: 3.8vh 0;
 }
 .b-face .wrap .wrap-item {
 	width: 100%;
@@ -572,12 +572,6 @@
 	-ms-animation: UpDown 2s linear infinite;
 	animation: UpDown 2s linear infinite;
 }
-/*.b-face .face-arr.show {
-	-webkit-animation: UpDown 2s linear infinite;
-	-moz-animation: UpDown 2s linear infinite;
-	-ms-animation: UpDown 2s linear infinite;
-	animation: UpDown 2s linear infinite;
-}*/
 
 .b-drone {
 	max-width: 860px;
@@ -872,6 +866,112 @@
 	margin-top: 30px;
 }
 
+.b-catalog .item {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 60px auto 0;
+}
+.b-catalog .item .image {
+	width: calc(50% - 15px);
+}
+.b-catalog .item .image img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.b-catalog .item .content {
+	width: calc(50% - 15px);
+	text-align: left;
+}
+.b-catalog .item .content .head {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.b-catalog .item .content .title {
+	font-size: 24px;
+	font-weight: 600;
+}
+.b-catalog .item .content .icons {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.b-catalog .item .content .icons > li {
+	display: block;
+	width: 35px;
+	margin-left: 15px;
+}
+.b-catalog .item .content .icons > li:first-child {
+	margin-left: 0;
+}
+.b-catalog .item .content .icons > li img {
+	display: block;
+	max-width: 100%;
+	max-height: 35px;
+	margin: 0 auto;
+}
+.b-catalog .item .content .tasks > li {
+	display: inline-block;
+	margin-right: 15px;
+	margin-top: 20px;
+	padding: 11.5px 35px;
+	border: 1px solid #303030;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+}
+.b-catalog .item .content .tasks > li:last-child {
+	margin-right: 0;
+}
+.b-catalog .item .content .text {
+	margin-top: 25px;
+	font-size: 16px;
+	line-height: 1.4;
+	text-align: left;
+}
+.b-catalog .item .content .params {
+	margin-top: 50px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #303030;
+}
+.b-catalog .item .content .params > li {
+	margin: 0 5px;
+	text-align: left;
+}
+.b-catalog .item .content .params > li:first-child {
+	margin-left: 0;
+}
+.b-catalog .item .content .params > li:last-child {
+	margin-right: 0;
+}
+.b-catalog .item .content .params > li .value {
+	font-size: 18px;
+	font-weight: 600;
+}
+.b-catalog .item .content .params > li .name {
+	font-size: 12px;
+	margin-top: 5px;
+}
+.b-catalog .item .content .b-btn {
+	margin-top: 30px;
+	max-width: 240px;
+}
+
 
 
 @media screen and (max-width: 1230px){
@@ -1061,9 +1161,6 @@
 		padding: 13px 10px;
 	}
 
-	.b-face {
-		padding: calc(50px + 3.8vh) 0 3.8vh;
-	}
 	.b-face .b-btn {
 		max-width: 200px;
 		margin: 20px auto 0;
@@ -1175,6 +1272,60 @@
 	.b-popup .b-text,
 	.b-popup .b-form {
 		margin-top: 20px;
+	}
+
+	.b-catalog .item {
+		display: block;
+		max-width: 560px;
+		margin: 40px auto 0;
+	}
+	.b-catalog .item .image {
+		width: 100%;
+	}
+	.b-catalog .item .content {
+		width: 100%;
+		margin: 20px auto 0;
+		text-align: center;
+	}
+	.b-catalog .item .content .head {
+		display: block;
+	}
+	.b-catalog .item .content .title {
+		font-size: 20px;
+	}
+	.b-catalog .item .content .icons {
+		justify-content: center;
+	}
+	.b-catalog .item .content .icons > li {
+		width: 25px;
+		margin: 10px 5px 0;
+	}
+	.b-catalog .item .content .icons > li:first-child {
+		margin-left: 5px;
+	}
+	.b-catalog .item .content .icons > li img {
+		max-height: 25px;
+	}
+	.b-catalog .item .content .tasks > li {
+		font-size: 10px;
+		padding: 10px 25px;
+	}
+	.b-catalog .item .content .text {
+		margin-top: 20px;
+		font-size: 14px;
+	}
+	.b-catalog .item .content .params {
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+	.b-catalog .item .content .b-btn {
+		margin: 20px auto 0;
+	}
+	.b-catalog .item .content .params > li .value {
+		font-size: 15px;
+	}
+	.b-catalog .item .content .params > li .name {
+		font-size: 10px;
 	}
 }
 @media screen and (max-width: 560px){
