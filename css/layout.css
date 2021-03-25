@@ -322,49 +322,41 @@ input, textarea, select, button {
     display: inline-block;
     max-width: 100%;
     font-size: 12px;
-    color: #2d2d2d;
+    color: #6f6f6f;
     line-height: 1.2;
     position: relative;
     text-align: left;
     padding-left: 35px;
-    margin-top: 15px;
 }
 .policy-text a {
-    color: #2d2d2d;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
 }
 .policy-text a:hover {
-    color: #ffca48;
+    border-color: #3e6ae1;
 }
 .policy-text .radio-btn {
     display: block;
     position: absolute;
     width: 25px;
     height: 25px;
-    border: 1px solid #f2f3f6;
-    background-color: #f2f3f6;
+    border: 2px solid #303030;
     border-radius: 5px;
     left: 0;
     top: calc(50% - 12.5px);
+    cursor: pointer;
 }
 .policy-text .radio-btn.error {
     border-color: #ff0000;
 }
-.policy-text .radio-btn:hover {
-    cursor: pointer;
-}
 .policy-text .radio-btn.active::before {
     content: '';
     display: block;
-    width: 10px;
+    width: 8px;
     height: 2px;
     position: absolute;
-    left: 1px;
-    top: 13px;
-    background-color: #0c112c;
+    left: 2px;
+    top: 12px;
+    background-color: #303030;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -373,12 +365,12 @@ input, textarea, select, button {
 .policy-text .radio-btn.active::after {
     content: '';
     display: block;
-    width: 15px;
+    width: 12px;
     height: 2px;
     position: absolute;
     left: 7px;
-    top: 11px;
-    background-color: #0c112c;
+    top: 10px;
+    background-color: #303030;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -402,5 +394,8 @@ input, textarea, select, button {
     }
     .mobile-menu {
         padding: 50px 10px;
+    }
+    .policy-text {
+        font-size: 10px;
     }
 }
