@@ -211,7 +211,7 @@ $(document).ready(function(){
 		$('.header').next().removeAttr('style');
 		let padding = +$('.header').next().css('padding-top').replace(/[^+\d.]/g,'');
 		padding += $('.header').outerHeight();
-		if ( $('.header').next().hasClass('b-face') ){
+		if ( $('.header').next().attr('data-bg') ){
 			let image = $('.header').next().attr('data-bg');
 			$('.header').next().css('background-image','url("'+image+'")');
 		}
