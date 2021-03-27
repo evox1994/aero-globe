@@ -15,4 +15,4 @@
 <a href="https://evox1994.github.io/aero-globe/in-progress" target="_blank">В разработке</a><br>
 <a href="https://evox1994.github.io/aero-globe/news" target="_blank">Новости</a><br>
 <a href="https://evox1994.github.io/aero-globe/news-more" target="_blank">Новость</a><br>
-<a href="https://evox1994.github.io/aero-globe/about" target="_blank">О нас</a><br>
+<a href="https://evox1994.github.io/aero-globe/about" target="_blank">О нас</a>

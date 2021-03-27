@@ -148,6 +148,16 @@ $(document).ready(function(){
 		$(this).parent('.b-product-slider').find('.texts').find('.item[data-text="'+element+'"]').addClass('active');
 	});
 
+	$(document).on('click','.b-history .btns > li',function(){
+		let element = $(this).attr('data-year');
+		if ( !$(this).hasClass('active') ){
+			$(this).parents('.btns').find('li').removeClass('active');
+			$(this).parents('.b-history').find('.info .item').removeClass('active');
+			$(this).parents('.b-history').find('.info .item[data-year="'+element+'"]').addClass('active');
+			$(this).addClass('active');
+		}
+	});
+
 	function HeaderScroll(){
 		let st = $(window).scrollTop();
 		if (st > $(window).outerHeight()){
