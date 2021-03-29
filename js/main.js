@@ -172,7 +172,19 @@ $(document).ready(function(){
 		let windowHeight = $(window).innerHeight();
 		$('.b-face').innerHeight(windowHeight);
 	}
-	setFaceHeight();
+
+	function setPadding(){
+		$('.header').next().removeAttr('style');
+		let padding = +$('.header').next().css('padding-top').replace(/[^+\d.]/g,'');
+		padding += $('.header').outerHeight();
+		if ( $('.header').next().attr('data-bg') ){
+			let image = $('.header').next().attr('data-bg');
+			$('.header').next().css('background-image','url("'+image+'")');
+		}
+		$('.header').next().css('padding-top',padding);
+		setFaceHeight();
+	}
+	setPadding();
 
 	function showElement(){
 		let st = $(window).scrollTop();
@@ -217,18 +229,6 @@ $(document).ready(function(){
 		});
 	}
 
-	function setPadding(){
-		$('.header').next().removeAttr('style');
-		let padding = +$('.header').next().css('padding-top').replace(/[^+\d.]/g,'');
-		padding += $('.header').outerHeight();
-		if ( $('.header').next().attr('data-bg') ){
-			let image = $('.header').next().attr('data-bg');
-			$('.header').next().css('background-image','url("'+image+'")');
-		}
-		$('.header').next().css('padding-top',padding);
-	}
-	setPadding();
-
 	function FaceLoaded(){
 		let $element = $('.b-face');
 		if ( $element.length ){
@@ -252,7 +252,6 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		HeaderScroll();
 		showElement();
-		setFaceHeight();
 		setPadding();
 	});
 
