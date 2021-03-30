@@ -623,9 +623,15 @@
 	border: 0;
 	border-radius: 100px;
 }
+.b-btn:hover {
+	background-color: #000000;
+}
 .b-section.dark .b-btn {
 	background-color: #ffffff;
 	color: #303030;
+}
+.b-section.dark .b-btn:hover {
+	background-color: #eeeeee;
 }
 .b-btn.border-btn {
 	border: 2px solid #303030;
@@ -649,9 +655,15 @@
 .b-btn.blue-btn {
 	background-color: #3e6ae1;
 }
+.b-btn.blue-btn:hover {
+	background-color: #3457b1;
+}
 .b-btn.white-btn {
 	background-color: #ffffff;
 	color: #303030;
+}
+.b-btn.white-btn:hover {
+	background-color: #eeeeee;
 }
 
 .b-form {
