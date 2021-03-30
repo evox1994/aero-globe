@@ -2202,6 +2202,9 @@
 		height: 360px !important;
 	}
 
+	.b-face {
+		background-attachment: scroll;
+	}
 	.b-face .face-params {
 		flex-wrap: wrap;
 		max-width: 760px;
