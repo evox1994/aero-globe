@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
+	<link rel="stylesheet" href="css/intlTelInput.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 
@@ -227,7 +228,7 @@
 							<div class="title">Консультация со специалистом</div>
 						</div>
 						<div class="bot">
-							<a href="#" class="b-btn border-btn">Заказать</a>
+							<a href="#popup-callback" class="b-btn border-btn fancybox">Заказать</a>
 						</div>
 					</li>
 					<li class="anim-el fadeDown" data-parent="true" data-delay="300">
@@ -236,7 +237,7 @@
 							<div class="title">Условия покупки и&nbsp;гарантии</div>
 						</div>
 						<div class="bot">
-							<a href="#" class="b-btn border-btn">Узнать</a>
+							<a href="#popup-terms" class="b-btn border-btn fancybox">Узнать</a>
 						</div>
 					</li>
 					<li class="anim-el fadeDown" data-parent="true" data-delay="600">
@@ -245,7 +246,7 @@
 							<div class="title">Полная техническая информация</div>
 						</div>
 						<div class="bot">
-							<a href="#" class="b-btn border-btn">Получить</a>
+							<a href="#popup-info" class="b-btn border-btn fancybox">Получить</a>
 						</div>
 					</li>
 				</ul>
@@ -300,6 +301,75 @@
 		</div>
 
 		<div style="display:none;">
+			<div class="b-popup" id="popup-callback">
+				<div class="title">Закажите консультацию</div>
+				<div class="subtitle">Наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</div>
+				<div class="b-form anim-el fadeDown" data-delay="600">
+					<form>
+						<div class="b-input">
+							<label>
+								<span>Ваше имя</span>
+								<input type="text" placeholder="">
+							</label>
+						</div>
+						<div class="b-input">
+							<label>
+								<span>Ваш телефон</span>
+								<input type="tel" placeholder="">
+							</label>
+						</div>
+						<div class="policy-text"><div class="radio-btn active"></div>Я принимаю <a href="#popup-policy" class="fancybox">условия передачи информации</a></div>
+						<button type="submit" class="b-btn blue-btn">Получить цену</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="b-popup" id="popup-terms">
+				<div class="title">Получите условия</div>
+				<div class="subtitle">Наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</div>
+				<div class="b-form anim-el fadeDown" data-delay="600">
+					<form>
+						<div class="b-input">
+							<label>
+								<span>Ваше имя</span>
+								<input type="text" placeholder="">
+							</label>
+						</div>
+						<div class="b-input">
+							<label>
+								<span>Ваш телефон</span>
+								<input type="tel" placeholder="">
+							</label>
+						</div>
+						<div class="policy-text"><div class="radio-btn active"></div>Я принимаю <a href="#popup-policy" class="fancybox">условия передачи информации</a></div>
+						<button type="submit" class="b-btn blue-btn">Получить цену</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="b-popup" id="popup-info">
+				<div class="title">Получите техническую информацию</div>
+				<div class="subtitle">Наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</div>
+				<div class="b-form anim-el fadeDown" data-delay="600">
+					<form>
+						<div class="b-input">
+							<label>
+								<span>Ваше имя</span>
+								<input type="text" placeholder="">
+							</label>
+						</div>
+						<div class="b-input">
+							<label>
+								<span>Ваш телефон</span>
+								<input type="tel" placeholder="">
+							</label>
+						</div>
+						<div class="policy-text"><div class="radio-btn active"></div>Я принимаю <a href="#popup-policy" class="fancybox">условия передачи информации</a></div>
+						<button type="submit" class="b-btn blue-btn">Получить цену</button>
+					</form>
+				</div>
+			</div>
+
 			<div class="b-popup policy" id="popup-policy">
 				<div class="title">Соглашение на обработку персональных данных</div>
 				<div class="b-text">
@@ -315,6 +385,8 @@
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="js/jquery.inputmask.bundle.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/intlTelInput.min.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

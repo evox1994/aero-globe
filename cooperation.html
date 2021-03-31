@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
+	<link rel="stylesheet" href="css/intlTelInput.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 
@@ -64,7 +65,7 @@
 			</div>
 		</div>
 
-		<div class="b-face right-line" data-bg="i/face-bg-5.jpg">
+		<div class="b-face grey right-line">
 			<div class="face-elem"><img src="i/face-el-1.png"></div>
 			<div class="container">
 				<div class="wrap">
@@ -72,7 +73,10 @@
 						<h2 class="b-title anim-el fadeDown">Ищем надёжных партнеров<br> по&nbsp;всему миру</h2>
 					</div>
 					<div class="wrap-item">
-						<a href="#" class="b-btn border-btn anim-el fadeUp">Получить условия</a>
+						<div class="face-img anim-el fadeIn"><img src="i/face-img.png"></div>
+					</div>
+					<div class="wrap-item">
+						<a href="#form-block" class="b-btn anim-el fadeUp scroll-btn">Получить условия</a>
 					</div>
 				</div>
 			</div>
@@ -100,7 +104,7 @@
 			</div>
 		</div>
 
-		<div class="b-section left-line">
+		<div class="b-section left-line" id="form-block">
 			<div class="container">
 				<h2 class="b-title anim-el fadeDown">Получите консультацию</h2>
 				<div class="b-subtitle anim-el fadeDown" data-delay="300">Наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее время</div>
@@ -222,6 +226,8 @@
 	<script type="text/javascript" src="js/jquery.fancybox.js"></script>
 	<script type="text/javascript" src="js/jquery.inputmask.bundle.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/intlTelInput.min.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

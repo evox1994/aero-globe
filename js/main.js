@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 	$('.fancybox-gal').fancybox({loop: true});
 	$('.fancybox').fancybox({touch: false});
-	$('input[type="tel"]').inputmask('+7 (999) 999-99-99');
+	//$('input[type="tel"]').inputmask('+7 (999) 999-99-99');
 
 	$(document).on('click','.close-btn',function(){
 		$('.mobile-btn').removeClass('active');
@@ -44,9 +44,9 @@ $(document).ready(function(){
 		var des = $(this).attr('data-scroll-offset');
 		if ($(el).length){
 			if (des){
-				$('body,html').animate({scrollTop: $(el).offset().top - des}, 800);
+				$('body,html').animate({scrollTop: $(el).offset().top - des - $('.header').outerHeight()}, 800);
 			} else {
-				$('body,html').animate({scrollTop: $(el).offset().top}, 800);
+				$('body,html').animate({scrollTop: $(el).offset().top - $('.header').outerHeight()}, 800);
 			}
 		}
 		return false;
@@ -231,7 +231,7 @@ $(document).ready(function(){
 
 	function FaceLoaded(){
 		let $element = $('.b-face');
-		if ( $element.length ){
+		if ( $element.attr('data-bg') ){
 			let element_bg = $element.css('background-image').replace(/url\((?:\"|\')/,'').replace(/(?:\"|\')\)/,'');
 			let image = new Image();
 			image.src = element_bg;
@@ -280,6 +280,27 @@ $(document).ready(function(){
 		}
 	}
 	scrollImage();
+
+	function TelMask(){
+		$('input[type="tel"]').inputmask('+7 999 999 99 99');
+
+		$('input[type="tel"]').intlTelInput({
+			autoHideDialCode: false,
+			autoPlaceholder: "aggressive",
+			placeholderNumberType: "MOBILE",
+			preferredCountries: ['ru'],
+			separateDialCode: true,
+			utilsScript: "js/utils.js",
+			customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+				return '+' + selectedCountryData.dialCode + ' ' + selectedCountryPlaceholder.replace(/[0-9]/g, '_').replace(/[-]/g, ' ');
+			},
+		});
+		$('input[type="tel"]').on("countrychange", function (e, countryData){
+			$(this).val('');
+			$(this).inputmask($(this).attr('placeholder').replace(/[_]/g, '9'));
+		});
+	}
+	TelMask();
 
 	$(window).on('scroll',function(){
 		HeaderScroll();

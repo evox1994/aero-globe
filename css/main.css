@@ -717,6 +717,9 @@
 	color: #ffffff;
 	background-color: #000000;
 }
+.b-face.grey {
+	background-color: #efefef;
+}
 .b-face.right-line:before {
 	content: '';
 	width: 1px;
@@ -843,12 +846,26 @@
 }
 .b-face .face-logo {
 	position: relative;
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 }
 .b-face .face-logo img {
 	display: block;
 	max-width: 100%;
 	margin: 0 auto;
+}
+.b-face .face-img {
+	width: 90%;
+	margin: 30px auto 0;
+}
+.b-face .face-img img {
+	display: block;
+	max-width: 100%;
+	max-height: 44.7vh;
+	margin: 0 auto;
+}
+.b-face .face-img.big img {
+	max-height: 51.9vh;
 }
 
 .b-drone {
@@ -1138,6 +1155,10 @@
 	display: block;
 	font-size: 24px;
 	font-weight: 600;
+}
+.b-popup .subtitle {
+	margin-top: 20px;
+	font-size: 16px;
 }
 .b-popup .b-text,
 .b-popup .b-form {
@@ -2153,6 +2174,23 @@
 	max-width: 240px;
 }
 
+.intl-tel-input {
+	display: block !important;
+}
+.intl-tel-input .selected-flag {
+	width: 50px !important;
+	background: none !important;
+}
+.intl-tel-input.separate-dial-code .selected-dial-code {
+	display: none !important;
+}
+.intl-tel-input .flag-container {
+	color: #191d20;
+}
+.intl-tel-input input {
+	padding-left: 60px !important;
+}
+
 
 
 @media screen and (max-width: 1230px){
@@ -2738,6 +2776,10 @@
 	.b-popup .title {
 		font-size: 20px;
 	}
+	.b-popup .subtitle {
+		font-size: 14px;
+		margin-top: 15px;
+	}
 	.b-popup .b-text,
 	.b-popup .b-form {
 		margin-top: 20px;
@@ -2959,6 +3001,7 @@
 	}
 	.b-services .item .content {
 		margin-top: 20px;
+		text-align: center;
 	}
 	.b-services .item .content .title {
 		font-size: 20px;
@@ -2968,7 +3011,7 @@
 		margin-top: 15px;
 	}
 	.b-services .item .content .b-btn {
-		margin-top: 15px;
+		margin: 20px auto 0;
 	}
 
 	.b-image span {
