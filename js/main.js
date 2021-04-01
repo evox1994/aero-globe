@@ -137,6 +137,13 @@ $(document).ready(function(){
 		return false;
 	});
 
+	$('.face-bg-slider').slick({
+		arrows: false,
+		autoplay: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+	});
+
 	$('.b-product-slider .slider').slick({
 		dots: true,
 		autoplay: true
@@ -238,7 +245,14 @@ $(document).ready(function(){
 			image.onload = function(){
 				showElement();
 			};
-		} else {
+		} else if ( $element.find('.face-bg-slider').length ) {
+			let element_bg = $element.find('.face-bg-slider .slide[data-slick-index="0"]').css('background-image').replace(/url\((?:\"|\')/,'').replace(/(?:\"|\')\)/,'');
+			let image = new Image();
+			image.src = element_bg;
+			image.onload = function(){
+				showElement();
+			};
+		} else { 
 			showElement();
 		}
 	}
