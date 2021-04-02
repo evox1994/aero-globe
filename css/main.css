@@ -2110,6 +2110,10 @@
 .b-contacts > li {
 	width: calc(100%/3 - 20px);
 	margin-top: 50px;
+	margin-right: 30px;
+}
+.b-contacts > li:nth-child(3n) {
+	margin-right: 0;
 }
 .b-contacts > li .icon {
 	display: block;
@@ -2504,6 +2508,7 @@
 	}
 	.b-contacts > li {
 		width: calc(50% - 15px);
+		margin-right: 0;
 	}
 }
 @media screen and (max-width: 768px){
@@ -3148,6 +3153,9 @@
 	.b-contacts > li {
 		width: 100%;
 		margin: 30px auto 0;
+	}
+	.b-contacts > li:nth-child(3n) {
+		margin-right: auto;
 	}
 	.b-contacts > li .icon {
 		width: 60px;
