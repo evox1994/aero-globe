@@ -315,6 +315,9 @@
 	font-size: 14px;
 	font-weight: 600;
 }
+.header-menu .menu ul > li.mobile {
+	display: none;
+}
 .header-menu .menu ul > li a {
 	display: block;
 	padding: 15px;
@@ -2212,6 +2215,10 @@
 	padding-left: 60px !important;
 }
 
+.b-policy .b-text {
+	max-width: none;
+}
+
 
 
 @media screen and (max-width: 1230px){
@@ -2261,6 +2268,12 @@
 	}
 	.header .nav {
 		display: none;
+	}
+	.header-menu .menu ul > li.desktop {
+		display: none;
+	}
+	.header-menu .menu ul > li.mobile {
+		display: block;
 	}
 
 	.footer-nav {
