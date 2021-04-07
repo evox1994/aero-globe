@@ -318,6 +318,9 @@
 .header-menu .menu ul > li.mobile {
 	display: none;
 }
+.header-menu .menu ul > li.desktop.mobile {
+	display: block;
+}
 .header-menu .menu ul > li a {
 	display: block;
 	padding: 15px;
@@ -1369,6 +1372,9 @@
 	display: block;
 	font-size: 24px;
 	font-weight: 600;
+}
+.b-product-descr .item .content .text + .title {
+    margin-top: 45px;
 }
 .b-product-descr .item .content .text {
 	margin-top: 35px;
@@ -2893,6 +2899,9 @@
 	}
 	.b-product-descr .item .content .title {
 		font-size: 20px;
+	}
+	.b-product-descr .item .content .text + .title {
+	    margin-top: 25px;
 	}
 	.b-product-descr .item .content .text {
 		margin-top: 20px;
